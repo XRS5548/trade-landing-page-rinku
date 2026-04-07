@@ -1,0 +1,318 @@
+/* style.css */
+/* Banknifty Master Landing Page - Modern, Dark Green + Black Gradient, Neon Accents */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 10% 20%, #0a1f1a, #030605);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  line-height: 1.4;
+  color: #eef5f0;
+}
+
+/* Main container – glassmorphic card */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(6, 18, 14, 0.65);
+  backdrop-filter: blur(2px);
+  border-radius: 3rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 255, 150, 0.08);
+  transition: all 0.2s ease;
+}
+
+/* content wrapper: flex column, center aligned */
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+/* ----- TOP SECTION (small text + circular logo) ----- */
+.top-badge {
+  display: inline-block;
+  background: rgba(0, 255, 180, 0.08);
+  border: 1px solid rgba(0, 255, 180, 0.3);
+  padding: 0.4rem 1.2rem;
+  border-radius: 60px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #a0f0e0;
+  backdrop-filter: blur(4px);
+  margin-bottom: 0.5rem;
+}
+
+.logo-circle {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #0e2b22, #05100c);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem auto 0.2rem auto;
+  box-shadow: 0 15px 30px -10px rgba(0,0,0,0.5), 0 0 0 2px rgba(0, 230, 180, 0.4), inset 0 1px 1px rgba(255,255,255,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  overflow: hidden;
+}
+.logo-circle:hover {
+  transform: scale(1.02);
+  box-shadow: 0 18px 32px -12px black, 0 0 0 3px rgba(0, 255, 200, 0.6);
+}
+
+/* Logo image styling */
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Fallback text logo in case /logo.png is missing */
+.logo-inner-fallback {
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: linear-gradient(130deg, #C0FFE0, #38f0c0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(0,200,150,0.3);
+}
+
+/* main heading group */
+.hero-title {
+  margin-top: 0.2rem;
+}
+h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(120deg, #F0FFF0, #8effd0, #2effb0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 5px rgba(0,20,0,0.2);
+}
+.subscriber-count {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #bfe9dd;
+  background: rgba(0,0,0,0.3);
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 40px;
+  backdrop-filter: blur(4px);
+  margin-top: 0.5rem;
+}
+
+/* SEBI badge (elegant, fake UI) */
+.sebi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 35, 35, 0.7);
+  border-left: 3px solid #00e6b0;
+  padding: 0.4rem 1.2rem 0.4rem 1rem;
+  border-radius: 40px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #bcf5e4;
+  backdrop-filter: blur(4px);
+  margin: 0.2rem 0 0.2rem;
+}
+.sebi-badge span {
+  font-weight: 700;
+  color: #7effcf;
+}
+
+/* features grid – modern card style */
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0.5rem 0 0.8rem;
+  width: 100%;
+}
+.feature-card {
+  background: rgba(8, 22, 18, 0.65);
+  backdrop-filter: blur(4px);
+  border-radius: 2rem;
+  padding: 1.2rem 1rem;
+  flex: 1 1 200px;
+  min-width: 160px;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0, 220, 150, 0.2);
+  box-shadow: 0 6px 12px -8px rgba(0,0,0,0.4);
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 170, 0.5);
+  background: rgba(12, 32, 26, 0.8);
+  box-shadow: 0 20px 25px -12px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,255,180,0.2);
+}
+.feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #dcfff0;
+  letter-spacing: -0.2px;
+}
+.feature-card p {
+  font-size: 0.8rem;
+  color: #b0d8cc;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* CTA button with glow & hover */
+.cta-wrapper {
+  margin: 0.8rem 0 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+.glow-effect {
+  position: absolute;
+  inset: -4px;
+  border-radius: 60px;
+  background: radial-gradient(circle, rgba(0,230,210,0.6), transparent 70%);
+  filter: blur(12px);
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.cta-button {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(105deg, #00c9a7, #0088ff);
+  padding: 1rem 2.8rem;
+  border-radius: 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  border: none;
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+.cta-button:hover {
+  transform: scale(1.02);
+  background: linear-gradient(105deg, #0cdbb5, #1f97ff);
+  box-shadow: 0 12px 28px rgba(0,200,150,0.4);
+}
+.cta-wrapper:hover .glow-effect {
+  opacity: 1;
+  filter: blur(16px);
+}
+
+/* soft divider */
+.divider {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2affb0, #5f9eff, transparent);
+  margin: 0.4rem auto 0.2rem;
+}
+.divider-light {
+  width: 100%;
+  max-width: 400px;
+  height: 1px;
+  background: radial-gradient(circle, rgba(0,255,170,0.25), transparent);
+  margin: 0.5rem 0;
+}
+
+/* footer text */
+.footer-note {
+  margin-top: 1.2rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #8bb7aa;
+  letter-spacing: 0.3px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  backdrop-filter: blur(4px);
+}
+
+/* responsive tuning */
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+  .container {
+    padding: 1.8rem 1.2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .subscriber-count {
+    font-size: 1rem;
+  }
+  .features-grid {
+    gap: 1rem;
+  }
+  .feature-card {
+    padding: 1rem 0.8rem;
+    min-width: 140px;
+  }
+  .cta-button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  .logo-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .logo-inner-fallback {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .feature-card {
+    flex: 1 1 100%;
+    max-width: 260px;
+  }
+  .container {
+    border-radius: 2rem;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  .top-badge {
+    font-size: 0.7rem;
+  }
+}
+
+/* additional refinements: neon blue/green accents on focus */
+a, .cta-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,255,180,0.5);
+  border-radius: 60px;
+}
+.feature-card:focus-within {
+  outline: 1px solid #00ffb3;
+}
